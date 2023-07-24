@@ -21,5 +21,5 @@ This ImageJ macro is designed to analyze Carl Zeiss confocal images. The macro w
 
 8. Repeat steps 6 for each image in your folder. 
 
-<p align="center"> <a href=" https://youtu.be/4HWWrh_u8nU"><img src="https://github.com/AlyonaMinina/Autophagic-bodies-size-measurement/blob/main/Images/Youtube%20preview.PNG?raw=true" width = 480> </img></a></p>
+<p align="center"> <a href="https://youtu.be/4HWWrh_u8nU"><img src="https://github.com/AlyonaMinina/Autophagic-bodies-size-measurement/blob/63e568f1cff57fc70a86aadcd8770973c3a2eeb8/Images/Youtube%20preview%202.PNG?raw=true" width = 480></img></a></p>
 
