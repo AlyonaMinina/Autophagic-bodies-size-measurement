@@ -8,7 +8,7 @@ This ImageJ macro is designed to analyze Carl Zeiss confocal images. The macro w
 **Step by step:**
 
 1. Put all images that you wish to process into a single folder.
-2. Download the macro file and drag&drop it into ImageJ -> the script will open in the Editor window
+2. Download the macro file ("Autophagic bodies size measurement.ijm") and drag&drop it into ImageJ -> the script will open in the Editor window
 3. Click on "Run"
 4. Follow the macro to open the folder from the Step 1
 5. If needed, change the number of regions of interest (ROIs) that you wish to analyze on EACH image and adjust the preset size for the ROIs (you will be able to adjust it later).
