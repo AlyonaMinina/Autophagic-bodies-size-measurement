@@ -53,7 +53,7 @@ print(czi_list.length + " images were detected for analysis");
 print("");
 
 // Request info from the user about the number and dimensions of the ROIs they wish to analyze
-number_of_ROIs = 3;
+number_of_ROIs = 5;
 ROI_height = 20;
 ROI_width = 10;
 
@@ -130,11 +130,11 @@ for (i = 0; i < czi_list.length; i++) {
 		//Measure and log the area of the current ROI	
 		run("Set Measurements...", "area redirect=None decimal=3");
 		run("Measure");
-		area = getResult("Area", 0);
-		Table.set(Column_3, current_last_row, area, Density_table);
+		ROI_area = getResult("Area", 0);
+		Table.set(Column_3, current_last_row, ROI_area, Density_table);
 		run("Clear Results");
 				
-		// Duplicate ROI and segment autophagic bodies NB! here you can adjust the settings for puncta segmentation!
+		// Duplicate ROI and quantify autophagic bodies within it using Florentine's segmentaion settings
 		run("Duplicate...", "duplicate channels=1");
 		rename("Micrograph");
 		run("8-bit");
@@ -150,7 +150,7 @@ for (i = 0; i < czi_list.length; i++) {
 		run("Despeckle");
 		run("Watershed");
 	
-		//measure particles. NB! here you can adjust the settings for puncta size and circularity limits!
+		//measure particles
 		run("Set Measurements...", "area redirect=None decimal=3");
 		run("Analyze Particles...", "size=0.15-10.00 circularity=0.70-1.00 show=[Overlay Masks] display clear composite");
 		rename("Segmentation");
@@ -170,8 +170,9 @@ for (i = 0; i < czi_list.length; i++) {
 		
 		//log particles number into the Autophagic bodies density table
 		AB_count = nResults;
+		ROI_area = Table.get(Column_3, current_last_row, Density_table);
 		Table.set(Column_4, current_last_row, AB_count, Density_table);
-		Table.set(Column_5, current_last_row, 10*AB_count/area, Density_table);
+		Table.set(Column_5, current_last_row, 10*AB_count/ROI_area, Density_table);
 		run("Clear Results");
 		
 		//Save thersholding results
