@@ -140,6 +140,7 @@ for (i = 0; i < czi_list.length; i++) {
 		run("8-bit");
 		run("Duplicate...", " ");
 		rename("Discard");
+		run("Enhance Contrast...", "saturated=0.5 normalize");
 		run("Despeckle");
 		run("Sharpen");
 		run("Despeckle");
