@@ -1,5 +1,12 @@
 # ImageJ macros for autophagic bodies size and density measurement
 
+</br>
+</br>
+ 
+<b>!! Please reference the study [(Zou et al., 2025)](https://www.nature.com/articles/s41467-024-55754-1) when using these scipts!! </b>
+  
+</br>
+</br>
 
 This ImageJ macro is designed to analyze Carl Zeiss confocal images. The macro will process all .czi files in a selected folder, it will process all regions of interests (ROIs) selected by the user and determine the number of autophagic bodies present in 10 um^2 of ROI and the area of each autophagic body.
 
